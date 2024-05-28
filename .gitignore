@@ -125,3 +125,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+.idea/vcs.xml
+.idea/material_theme_project_new.xml
+.idea/vcs.xml
+.idea/material_theme_project_new.xml
