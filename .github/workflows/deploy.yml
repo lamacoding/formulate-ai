@@ -27,12 +27,12 @@ jobs:
           *.idea
           */**/idea
 
-    - name: Run pnpm install
-      env:
-        SSH_USER: ${{ secrets.FTP_USERNAME }}
-        SSH_PASS: ${{ secrets.FTP_PASSWORD }}
-        SSH_HOST: 185.164.6.221
-        SSH_PORT: 22
-      run: |
-        ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST -p $SSH_PORT "cd /var/www/formulate-ai && sudo pnpm install"
+    # - name: Run pnpm install
+    #   env:
+    #     SSH_USER: ${{ secrets.FTP_USERNAME }}
+    #     SSH_PASS: ${{ secrets.FTP_PASSWORD }}
+    #     SSH_HOST: 185.164.6.221
+    #     SSH_PORT: 22
+    #   run: |
+    #     ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST -p $SSH_PORT "cd /var/www/formulate-ai && sudo pnpm install"
   
