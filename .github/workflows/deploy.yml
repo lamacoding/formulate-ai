@@ -21,4 +21,18 @@ jobs:
         port: 22
         uploads: |
           ./ => ./var/www/formulate-ai
+        ignore: |
+          *.git
+          */**/*git*
+          *.idea
+          */**/idea
+
+    - name: Run pnpm install
+      env:
+        SSH_USER: ${{ secrets.FTP_USERNAME }}
+        SSH_PASS: ${{ secrets.FTP_PASSWORD }}
+        SSH_HOST: y3hqfr.myvserver.online
+        SSH_PORT: 22
+      run: |
+        ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST -p $SSH_PORT "cd /var/www/formulate-ai && pnpm install"
   
