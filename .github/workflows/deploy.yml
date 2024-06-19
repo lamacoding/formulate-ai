@@ -34,5 +34,5 @@ jobs:
         SSH_HOST: y3hqfr.myvserver.online
         SSH_PORT: 22
       run: |
-        ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST -p $SSH_PORT "cd /var/www/formulate-ai && pnpm install"
+        ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST -p $SSH_PORT "cd /var/www/formulate-ai && sudo pnpm install"
   
