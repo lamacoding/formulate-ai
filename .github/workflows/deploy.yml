@@ -20,7 +20,7 @@ jobs:
         server: y3hqfr.myvserver.online
         port: 22
         uploads: |
-          ./ => ./var/www/formulate-ai
+          ./ => /var/www/formulate-ai
         ignore: |
           *.git
           */**/*git*
